@@ -48,7 +48,7 @@ MEGAMONEY/
 * Clique em **"Limpar Resultados"** se desejar apagar a exibição daquele jogo e resetar o painel para o estado padrão.
 
 ### Como Copiar
-* Para copiar os números de apenas um jogo, clique no ícone de dois papéis no lado direito do painel de números.
+* Para copiar os números de apenas um jogo, clique no botão com ícone de dois papéis, que surgirá após os números serem sorteados.
 * Para baixar um relatório consolidado com todos os jogos ativos em PDF, clique no botão **"Baixar números da sorte"** localizado na base da seção de dropdowns.
 
 ---
