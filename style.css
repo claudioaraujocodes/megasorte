@@ -1,0 +1,797 @@
+/* 
+   Mega Sorte - Folha de Estilos
+   Design moderno, responsivo, com referências estéticas contemporâneas.
+   Paleta de cores baseada no esboço: Verde Esmeralda, Creme e Vermelho Escuro.
+*/
+
+/* Variáveis do Design System */
+:root {
+    --bg-cream: #faf9f2;
+    /* Fundo suave off-white */
+    --primary-green: #009e73;
+    /* Verde Esmeralda */
+    --primary-green-dark: #007c5b;
+    /* Verde mais escuro para estados interativos */
+    --primary-green-light: #e6f6f1;
+    /* Verde bem claro para contrastes */
+    --accent-red: #9b2226;
+    /* Vermelho Escuro do título */
+    --accent-red-hover: #7b1a1d;
+    /* Vermelho escuro interativo */
+    --text-dark: #1e293b;
+    /* Texto principal */
+    --text-light: #ffffff;
+    /* Texto claro */
+    --text-muted: #64748b;
+    /* Texto secundário/suave */
+    --border-color: rgba(0, 158, 115, 0.15);
+    /* Borda esmeralda translúcida */
+    --border-radius: 12px;
+    /* Bordas arredondadas modernas */
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Animação suave padrão */
+}
+
+/* Reset e Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Menu e Cabeçalho */
+header {
+    background-color: var(--primary-green-dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 24px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 32px;
+    width: auto;
+}
+
+.logo-text {
+    color: var(--text-light);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    /* Garante que o texto fique em uma única linha */
+}
+
+.itens ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.itens li {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    padding: 4px 0;
+}
+
+/* Efeito de linha deslizante nos links do menu */
+.itens li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-light);
+    transition: var(--transition);
+}
+
+.itens li:hover {
+    color: var(--text-light);
+}
+
+.itens li:hover::after {
+    width: 100%;
+}
+
+/* Layout do Corpo e Banner Hero */
+.corpo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Banner Superior (Hero) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    color: var(--accent-red);
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--primary-green);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
+    animation: float 4s ease-in-out infinite;
+    /* Efeito flutuante na imagem do topo */
+}
+
+/* Animação Flutuante */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Seção de Informações (Sobre) */
+.info-section {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    padding: 80px 24px;
+}
+
+.info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+.info-logo-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.info-logo-header img {
+    height: 60px;
+    margin-bottom: 12px;
+}
+
+.info-logo-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.info-col-left p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.info-col-right h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--bg-cream);
+    padding-left: 12px;
+}
+
+.info-col-right ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-col-right li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+.info-col-right li strong {
+    color: #fff;
+}
+
+.info-col-right li::before {
+    content: '•';
+    color: var(--bg-cream);
+    font-size: 20px;
+    line-height: 1;
+}
+
+.info-col-right .call-action {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+/* Seção de Sorteio (Dropdowns) */
+.sorteio-section {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    width: 100%;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--accent-red);
+}
+
+.title-clover {
+    height: 1.25em;
+    /* Levemente maior que a fonte do texto (1.25 * 26px = 32.5px) */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Accordion/Dropdown Items */
+.accordion-item {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.accordion-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    cursor: pointer;
+    user-select: none;
+    background-color: #ffffff;
+    transition: var(--transition);
+}
+
+.accordion-header:hover {
+    background-color: var(--primary-green-light);
+}
+
+.accordion-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.game-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-green);
+}
+
+.accordion-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.accordion-arrow {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-muted);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Classe ativa do accordion (quando expandido) */
+.accordion-item.active {
+    border-color: var(--primary-green);
+}
+
+.accordion-item.active .accordion-header {
+    background-color: var(--primary-green-light);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-item.active .accordion-arrow {
+    transform: rotate(180deg);
+    fill: var(--primary-green);
+}
+
+/* Conteúdo Expandido do Dropdown */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #ffffff;
+}
+
+/* Exibir quando ativo via JS alterando o max-height dinamicamente */
+.accordion-content-inner {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Botões do Painel */
+.panel-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-green-dark);
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    border: 1px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+    background-color: #e2e8f0;
+    color: var(--text-dark);
+}
+
+/* Display de Exibição dos Números Sorteados */
+.display-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8fafc;
+    border: 1px dashed var(--primary-green);
+    border-radius: 8px;
+    padding: 16px 20px;
+    gap: 15px;
+    min-height: 80px;
+    position: relative;
+}
+
+.display-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Caso não haja números sorteados */
+.no-numbers {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Formato das Bolas de Sorteio */
+.lottery-ball {
+    width: 42px;
+    height: 42px;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f1f5f9 20%, #cbd5e1 80%, #94a3b8 100%);
+    border: 1px solid #cbd5e1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-sm);
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+/* Variações de Cores para as Bolas baseada no tipo de jogo */
+.lottery-ball.megasena {
+    background: radial-gradient(circle at 30% 30%, #34d399 0%, #10b981 60%, #047857 100%);
+    color: #fff;
+    border: none;
+}
+
+.lottery-ball.quina {
+    background: radial-gradient(circle at 30% 30%, #f87171 0%, #ef4444 60%, #b91c1c 100%);
+    color: #fff;
+    border: none;
+}
+
+.lottery-ball.lotofacil {
+    background: radial-gradient(circle at 30% 30%, #c084fc 0%, #a855f7 60%, #7e22ce 100%);
+    color: #fff;
+    border: none;
+}
+
+.lottery-ball.lotomania {
+    background: radial-gradient(circle at 30% 30%, #fbbf24 0%, #f59e0b 60%, #b45309 100%);
+    color: #fff;
+    border: none;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Botão de Cópia Individual */
+.btn-copy-individual {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    color: var(--text-muted);
+}
+
+.btn-copy-individual:hover {
+    background-color: var(--primary-green-light);
+    color: var(--primary-green);
+}
+
+.btn-copy-individual svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Botão de Ação Global (PDF) */
+.global-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-global {
+    width: 100%;
+    max-width: 400px;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: #f59e0b;
+    /* Amarelo/ouro da esfera Lotomania */
+    color: var(--text-light);
+    border-radius: var(--border-radius);
+}
+
+.btn-global:hover {
+    background-color: #d97706;
+    /* Amarelo/ouro escuro para o hover */
+    transform: translateY(-2px);
+}
+
+.btn-global:active {
+    transform: translateY(0);
+}
+
+/* Feedback temporário de cópia */
+.tooltip-feedback {
+    position: absolute;
+    bottom: 100%;
+    right: 15px;
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    pointer-events: none;
+    animation: fadeOutTooltip 1.5s forwards;
+    z-index: 10;
+}
+
+@keyframes fadeOutTooltip {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+/* Responsividade - Media Queries (Desktop) */
+@media (min-width: 768px) {
+    .info-container {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+    }
+
+    .info-col-right h3 {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-section {
+        padding: 80px 24px;
+        flex-direction: row;
+    }
+
+    .hero-content {
+        text-align: left;
+    }
+}
+
+@media (max-width: 1023px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 24px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image-container {
+        max-width: 400px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsividade específica para telas de celulares pequenas */
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: clamp(12px, 4.3vw, 16px);
+        /* Reduz e ajusta o texto da logo dinamicamente */
+    }
+
+    .logo-img {
+        height: 24px;
+        /* Reduz a altura do ícone */
+    }
+
+    .menu {
+        padding: 10px 14px;
+        /* Reduz o padding interno do menu */
+        gap: 8px;
+    }
+
+    .itens ul {
+        gap: 12px;
+        /* Reduz espaçamento dos itens do menu */
+    }
+
+    /* Botões lado a lado com mesmo tamanho no mobile */
+    .panel-actions {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .panel-actions .btn {
+        flex: 1;
+        /* Garante tamanho idêntico de 50% para ambos os botões */
+        padding: 10px 8px;
+        /* Reduz o padding interno */
+        font-size: 11px;
+        /* Diminui a fonte para o texto se adequar sem quebrar */
+        white-space: nowrap;
+        /* Impede a quebra de linha interna */
+        letter-spacing: -0.2px;
+    }
+}
+
+/* Seção Sobre o Projeto (sobre.html) */
+.sobre-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    width: 100%;
+}
+
+.sobre-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sobre-card h2 {
+    color: var(--accent-red);
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.sobre-card h3 {
+    color: var(--primary-green-dark);
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.sobre-card p {
+    font-size: 15px;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.sobre-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 8px;
+}
+
+.sobre-card li {
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+.sobre-card li::before {
+    content: '•';
+    color: var(--primary-green);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.sobre-card .footer-info {
+    font-size: 13px;
+    color: var(--text-muted);
+    border-top: 1px solid #e2e8f0;
+    padding-top: 16px;
+    font-style: italic;
+    line-height: 1.5;
+}

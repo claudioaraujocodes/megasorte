@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador Mega Sorte</title>
+    <!-- Fonte Outfit do Google Fonts para o design moderno e futurista -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Folha de estilos customizada -->
+    <link rel="stylesheet" href="style.css">
+    <!-- jsPDF Biblioteca para geração e download de PDF no front-end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Script contendo a lógica do gerador de apostas -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Imagem oculta pré-carregada para utilização no cabeçalho do PDF -->
+    <img id="pdf-logo" src="img/vecteezy_folha-de-trevo-da-sorte_13713853.png" style="display: none;"
+        alt="Trevo de Quatro Folhas">
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <div class="menu">
+            <a href="#" class="logo-container">
+                <img src="img/logo.png" alt="Logo Trevo" class="logo-img">
+                <span class="logo-text">GERADOR MEGA SORTE</span>
+            </a>
+            <nav class="itens">
+                <ul>
+                    <li><a href="sobre.html" style="color: inherit; text-decoration: none;">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="corpo">
+
+        <!-- Banner Superior (Hero) -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Toda sorte do mundo em um clique!</h1>
+                <p class="hero-subtitle">
+                    Acesse o GERADOR MEGA SORTE e gere suas sequências de números para a próxima loteria. A sua sorte
+                    pode estar a apenas um clique de distância!
+                </p>
+            </div>
+            <div class="hero-image-container">
+                <img src="img/sorte.png" alt="Pilhas de Dinheiro e Trevo" class="hero-image">
+            </div>
+        </section>
+
+        <!-- Seção Central de Apresentação e Detalhes -->
+        <section class="info-section">
+            <div class="info-container">
+                <div class="info-logo-header">
+                    <img src="img/logo2.png" alt="Logo Trevo Branco">
+                    <h2>GERADOR MEGA SORTE</h2>
+                </div>
+
+                <div class="info-grid">
+                    <!-- Coluna Esquerda: Texto Apresentação -->
+                    <div class="info-col-left">
+                        <p>
+                            Cansado de escolher os mesmos números da loteria e nunca ser premiado? O GERADOR MEGA SORTE
+                            chegou para te ajudar!
+                        </p>
+                        <p>
+                            Com nosso gerador de números da sorte, você pode criar sequências de números para diversos
+                            jogos de loteria, como Mega-Sena, Lotofácil, Quina e muitas outras.
+                        </p>
+                        <p>
+                            É rápido, fácil e totalmente gratuito! Basta escolher o seu jogo de loteria preferido e
+                            clicar em "Gerar". O GERADOR MEGA SORTE fará o resto, criando combinações únicas para
+                            você.
+                        </p>
+                    </div>
+
+                    <!-- Coluna Direita: Vantagens -->
+                    <div class="info-col-right">
+                        <h3>Por que usar o GERADOR MEGA SORTE?</h3>
+                        <ul>
+                            <li>
+                                <span><strong>Aumente suas chances de ganhar:</strong> Experimente novas combinações de
+                                    números e não fique preso aos seus números da sorte tradicionais.</span>
+                            </li>
+                            <li>
+                                <span><strong>Economize tempo:</strong> Esqueça de passar horas escolhendo números
+                                    manualmente. O MEGA SORTE GENERATOR faz isso por você em segundos.</span>
+                            </li>
+                            <li>
+                                <span><strong>Diversão garantida:</strong> Experimente diferentes estratégias de jogo e
+                                    divirta-se mais com as loterias.</span>
+                            </li>
+                        </ul>
+                        <p class="call-action">A sorte te espera!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção do Sistema Gerador (Dropdowns) -->
+        <section class="sorteio-section">
+            <h2 class="section-title">
+                <img src="img/vecteezy_folha-de-trevo-da-sorte_13713853.png" alt="Trevo de Quatro Folhas"
+                    class="title-clover">
+                Selecione o tipo de aposta
+                <img src="img/vecteezy_folha-de-trevo-da-sorte_13713853.png" alt="Trevo de Quatro Folhas"
+                    class="title-clover">
+            </h2>
+
+            <!-- Dropdown da Mega-Sena -->
+            <div class="accordion-item" id="game-megasena">
+                <div class="accordion-header">
+                    <div class="accordion-header-left">
+                        <!-- Ícone SVG de trevo correspondente ao jogo -->
+                        <svg class="game-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                        <h3>Mega-Sena (6 números)</h3>
+                    </div>
+                    <svg class="accordion-arrow" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <div class="panel-actions">
+                            <button class="btn btn-primary btn-draw" data-game="megasena">Sortear Números</button>
+                            <button class="btn btn-secondary btn-clear" data-game="megasena">Limpar Resultados</button>
+                        </div>
+                        <div class="display-container">
+                            <div class="display-numbers" id="numbers-megasena">
+                                <span class="no-numbers">Nenhum número sorteado ainda.</span>
+                            </div>
+                            <button class="btn-copy-individual" data-game="megasena" title="Copiar números">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dropdown da Quina -->
+            <div class="accordion-item" id="game-quina">
+                <div class="accordion-header">
+                    <div class="accordion-header-left">
+                        <svg class="game-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                        <h3>Quina (5 números)</h3>
+                    </div>
+                    <svg class="accordion-arrow" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <div class="panel-actions">
+                            <button class="btn btn-primary btn-draw" data-game="quina">Sortear Números</button>
+                            <button class="btn btn-secondary btn-clear" data-game="quina">Limpar Resultados</button>
+                        </div>
+                        <div class="display-container">
+                            <div class="display-numbers" id="numbers-quina">
+                                <span class="no-numbers">Nenhum número sorteado ainda.</span>
+                            </div>
+                            <button class="btn-copy-individual" data-game="quina" title="Copiar números">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dropdown da Lotofácil -->
+            <div class="accordion-item" id="game-lotofacil">
+                <div class="accordion-header">
+                    <div class="accordion-header-left">
+                        <svg class="game-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                        <h3>Lotofácil (15 números)</h3>
+                    </div>
+                    <svg class="accordion-arrow" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <div class="panel-actions">
+                            <button class="btn btn-primary btn-draw" data-game="lotofacil">Sortear Números</button>
+                            <button class="btn btn-secondary btn-clear" data-game="lotofacil">Limpar Resultados</button>
+                        </div>
+                        <div class="display-container">
+                            <div class="display-numbers" id="numbers-lotofacil">
+                                <span class="no-numbers">Nenhum número sorteado ainda.</span>
+                            </div>
+                            <button class="btn-copy-individual" data-game="lotofacil" title="Copiar números">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dropdown da Lotomania -->
+            <div class="accordion-item" id="game-lotomania">
+                <div class="accordion-header">
+                    <div class="accordion-header-left">
+                        <svg class="game-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                        <h3>Lotomania (50 números)</h3>
+                    </div>
+                    <svg class="accordion-arrow" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <div class="panel-actions">
+                            <button class="btn btn-primary btn-draw" data-game="lotomania">Sortear Números</button>
+                            <button class="btn btn-secondary btn-clear" data-game="lotomania">Limpar Resultados</button>
+                        </div>
+                        <div class="display-container">
+                            <div class="display-numbers" id="numbers-lotomania">
+                                <span class="no-numbers">Nenhum número sorteado ainda.</span>
+                            </div>
+                            <button class="btn-copy-individual" data-game="lotomania" title="Copiar números">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão de Ação Global (PDF) -->
+            <div class="global-actions">
+                <button class="btn btn-global" id="btn-export-pdf">Baixar números da sorte</button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Gerador Mega Sorte. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Cláudio Araujo.</p>
+    </footer>
+
+</body>
+
+</html>
