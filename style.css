@@ -374,6 +374,8 @@ header {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+    align-items: center;
+    position: relative;
 }
 
 .btn {
@@ -420,12 +422,10 @@ header {
 .display-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: #f8fafc;
     border: 1px dashed var(--primary-green);
     border-radius: 8px;
     padding: 16px 20px;
-    gap: 15px;
     min-height: 80px;
     position: relative;
 }
@@ -499,26 +499,17 @@ header {
 
 /* Botão para copiar números */
 .btn-copy-individual {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-    color: var(--text-muted);
+    display: none;
+    padding: 9px 12px;
 }
 
-.btn-copy-individual:hover {
-    background-color: var(--primary-green-light);
-    color: var(--primary-green);
+.btn-copy-individual.visible {
+    display: inline-flex;
 }
 
 .btn-copy-individual svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     fill: currentColor;
 }
 
@@ -554,22 +545,26 @@ header {
 /* Mensagem flutuante de confirmação */
 .tooltip-feedback {
     position: absolute;
-    bottom: 100%;
-    right: 15px;
-    background-color: var(--text-dark);
-    color: var(--text-light);
+    top: calc(100% + 8px);
+    right: 0;
+    background-color: #f1f5f9;
+    color: var(--text-dark);
+    border: 1px solid #cbd5e1;
     font-size: 12px;
-    padding: 5px 10px;
-    border-radius: 4px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
     pointer-events: none;
     animation: fadeOutTooltip 1.5s forwards;
-    z-index: 10;
+    z-index: 100;
+    white-space: nowrap;
+    box-shadow: var(--shadow-md);
 }
 
 @keyframes fadeOutTooltip {
     0% {
         opacity: 0;
-        transform: translateY(5px);
+        transform: translateY(-5px);
     }
 
     15% {
@@ -583,7 +578,7 @@ header {
 
     100% {
         opacity: 0;
-        transform: translateY(-5px);
+        transform: translateY(5px);
     }
 }
 
@@ -679,6 +674,11 @@ footer p {
         font-size: 11px;
         white-space: nowrap;
         letter-spacing: -0.2px;
+    }
+
+    .panel-actions .btn-copy-individual {
+        flex: 0 0 auto;
+        padding: 10px 10px;
     }
 }
 

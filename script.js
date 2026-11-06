@@ -81,6 +81,11 @@ function sortearNumeros(tipoJogo) {
         divNumerosSorteados.appendChild(ball);
     }
 
+    const btnCopiar = document.querySelector(`.btn-copy-individual[data-game="${tipoJogo}"]`);
+    if (btnCopiar) {
+        btnCopiar.classList.add("visible");
+    }
+
     atualizarAlturaAccordion(tipoJogo);
 }
 
@@ -95,6 +100,11 @@ function limparResultados(tipoJogo) {
     noNumbersSpan.className = "no-numbers";
     noNumbersSpan.innerText = "Nenhum número sorteado ainda.";
     divNumerosSorteados.appendChild(noNumbersSpan);
+
+    const btnCopiar = document.querySelector(`.btn-copy-individual[data-game="${tipoJogo}"]`);
+    if (btnCopiar) {
+        btnCopiar.classList.remove("visible");
+    }
 
     atualizarAlturaAccordion(tipoJogo);
 }
@@ -118,8 +128,10 @@ function copiarNumerosIndividuais(tipoJogo) {
 
 // Mensagem de aviso na tela
 function exibirFeedback(tipoJogo, mensagem) {
-    const container = document.getElementById(`numbers-${tipoJogo}`).parentElement;
-    
+    const btn = document.querySelector(`.btn-copy-individual[data-game="${tipoJogo}"]`);
+    if (!btn) return;
+
+    const container = btn.parentElement;
     const anterior = container.querySelector(".tooltip-feedback");
     if (anterior) {
         anterior.remove();
