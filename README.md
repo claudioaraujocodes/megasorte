@@ -1,4 +1,4 @@
-# Documentação do Projeto: Gerador Mega Sorte
+# Gerador Mega Sorte
 
 **Gerador Mega Sorte** é um simulador e gerador matemático de dezenas para apostas lotéricas desenvolvido com foco em design moderno, responsividade fluida e usabilidade premium.
 
@@ -8,8 +8,8 @@
 
 O **Gerador Mega Sorte** é uma aplicação web estática projetada com o objetivo de estudos e práticas de desenvolvimento de software front-end. A ferramenta permite aos usuários gerarem sequências numéricas aleatórias para as principais loterias da Caixa Econômica Federal de forma limpa, dinâmica e interativa.
 
-> [!IMPORTANT]
-> **Aviso de Isenção:** Este projeto foi desenvolvido estritamente com propósitos educativos e de portfólio. Não possui qualquer vínculo, parceria ou afiliação oficial com a Caixa Econômica Federal ou com nenhuma outra instituição oficial de apostas e loterias.
+
+**Aviso de Isenção:** Este projeto foi desenvolvido estritamente com propósitos educativos e de portfólio. Não possui qualquer vínculo, parceria ou afiliação oficial com a Caixa Econômica Federal ou com nenhuma outra instituição oficial de apostas e loterias.
 
 ---
 
@@ -24,7 +24,7 @@ MEGAMONEY/
 ├── sobre.html            # Página de autoria, tecnologias e jogo responsável
 ├── style.css             # Folha de estilo e design system responsivo
 ├── script.js             # Lógica de controle do DOM, sorteios e geração de PDF
-└── DOCUMENTACAO.md       # Este arquivo de documentação técnica
+└── README.md             # Arquivo de documentação técnica
 ```
 
 ---
