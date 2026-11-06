@@ -1,25 +1,24 @@
 # Documentação do Projeto: Gerador Mega Sorte
 
-Bem-vindo à documentação do **Gerador Mega Sorte**, um simulador e gerador matemático de dezenas para apostas lotéricas desenvolvido com foco em design moderno, responsividade fluida e usabilidade premium.
+**Gerador Mega Sorte** é um simulador e gerador matemático de dezenas para apostas lotéricas desenvolvido com foco em design moderno, responsividade fluida e usabilidade premium.
 
 ---
 
 ## 📌 Visão Geral
 
-O **Gerador Mega Sorte** é uma aplicação web estática projetada com o objetivo de fins de estudo acadêmicos e práticas de desenvolvimento de software front-end. A ferramenta permite aos usuários gerarem sequências numéricas aleatórias para as principais loterias da Caixa Econômica Federal de forma limpa, dinâmica e interativa.
+O **Gerador Mega Sorte** é uma aplicação web estática projetada com o objetivo de estudos e práticas de desenvolvimento de software front-end. A ferramenta permite aos usuários gerarem sequências numéricas aleatórias para as principais loterias da Caixa Econômica Federal de forma limpa, dinâmica e interativa.
 
 > [!IMPORTANT]
 > **Aviso de Isenção:** Este projeto foi desenvolvido estritamente com propósitos educativos e de portfólio. Não possui qualquer vínculo, parceria ou afiliação oficial com a Caixa Econômica Federal ou com nenhuma outra instituição oficial de apostas e loterias.
 
 ---
 
-## 🛠️ Arquitetura do Projeto
+## Arquitetura do Projeto
 
 O projeto segue as diretrizes modernas de desenvolvimento front-end sem frameworks, organizando o código de forma simples, legível e com clara separação de responsabilidades em arquivos separados:
 
 ```
 MEGAMONEY/
-├── .agents/              # Configurações de habilidades e regras locais dos agentes
 ├── img/                  # Ativos de imagens (logos do trevo, banners e esboço)
 ├── index.html            # Estrutura principal da página do gerador
 ├── sobre.html            # Página de autoria, tecnologias e jogo responsável
@@ -30,7 +29,7 @@ MEGAMONEY/
 
 ---
 
-## ✨ Funcionalidades Principais
+## Funcionalidades Principais
 
 1. **Interface Accordion Interativa:** Cada modalidade de aposta (Mega-Sena, Quina, Lotofácil e Lotomania) é isolada dentro de um painel dropdown animado. Clicar na barra do jogo abre ou fecha o painel de forma suave.
 2. **Persistência Visual de Sorteios:** Os números gerados para cada jogo são salvos em memória. O usuário pode fechar e reabrir os painéis sem perder as dezenas sorteadas na tela.
@@ -71,6 +70,10 @@ MEGAMONEY/
 
 ## ⚖️ Termos de Jogo Responsável e Isenção
 
-* **Fins de Entretenimento:** Os números são gerados de forma puramente matemática e aleatória. Não garantimos vitórias ou resultados favoráveis em apostas reais.
+* **Fins de Entretenimento:** 
+O Gerador Mega Sorte é um simulador matemático aleatório baseado em probabilidades. Esta ferramenta foi desenvolvida estritamente com o propósito de estudos e práticas de desenvolvimento de software front-end, não possuindo qualquer vínculo, parceria ou afiliação com nenhuma instituição oficial de apostas e loterias. Este site gera apenas sugestões de dezenas
+para entretenimento e estudo, não garantindo de forma alguma a vitória, premiações ou acertos nas apostas reais. As apostas baseadas nos números gerados são de inteira e exclusiva responsabilidade do jogador.
+
 * **Responsabilidade:** Toda e qualquer aposta realizada utilizando os números fornecidos por esta ferramenta é de responsabilidade única e exclusiva do usuário.
+
 * **Jogo Saudável:** Jogue com responsabilidade e controle. Estimulamos as apostas estritamente como forma de lazer recreativo e não apoiamos ou incentivamos o hábito compulsivo. Menores de 18 anos são expressamente desencorajados a utilizar ferramentas de simulação de apostas.

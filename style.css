@@ -1,41 +1,23 @@
-/* 
-   Mega Sorte - Folha de Estilos
-   Design moderno, responsivo, com referências estéticas contemporâneas.
-   Paleta de cores baseada no esboço: Verde Esmeralda, Creme e Vermelho Escuro.
-*/
-
-/* Variáveis do Design System */
+/* Variáveis visuais */
 :root {
     --bg-cream: #faf9f2;
-    /* Fundo suave off-white */
     --primary-green: #009e73;
-    /* Verde Esmeralda */
     --primary-green-dark: #007c5b;
-    /* Verde mais escuro para estados interativos */
     --primary-green-light: #e6f6f1;
-    /* Verde bem claro para contrastes */
     --accent-red: #9b2226;
-    /* Vermelho Escuro do título */
     --accent-red-hover: #7b1a1d;
-    /* Vermelho escuro interativo */
     --text-dark: #1e293b;
-    /* Texto principal */
     --text-light: #ffffff;
-    /* Texto claro */
     --text-muted: #64748b;
-    /* Texto secundário/suave */
     --border-color: rgba(0, 158, 115, 0.15);
-    /* Borda esmeralda translúcida */
     --border-radius: 12px;
-    /* Bordas arredondadas modernas */
     --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    /* Animação suave padrão */
 }
 
-/* Reset e Configurações Globais */
+/* Reset e configurações gerais */
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +32,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Menu e Cabeçalho */
+/* Menu e cabeçalho */
 header {
     background-color: var(--primary-green-dark);
     position: sticky;
@@ -86,7 +68,6 @@ header {
     font-weight: 700;
     letter-spacing: -0.5px;
     white-space: nowrap;
-    /* Garante que o texto fique em uma única linha */
 }
 
 .itens ul {
@@ -104,7 +85,6 @@ header {
     padding: 4px 0;
 }
 
-/* Efeito de linha deslizante nos links do menu */
 .itens li::after {
     content: '';
     position: absolute;
@@ -124,14 +104,13 @@ header {
     width: 100%;
 }
 
-/* Layout do Corpo e Banner Hero */
+/* Estrutura principal e banner de destaque */
 .corpo {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-/* Banner Superior (Hero) */
 .hero-section {
     display: flex;
     align-items: center;
@@ -174,10 +153,9 @@ header {
     height: auto;
     filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
     animation: float 4s ease-in-out infinite;
-    /* Efeito flutuante na imagem do topo */
 }
 
-/* Animação Flutuante */
+/* Animação de flutuação */
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -192,7 +170,7 @@ header {
     }
 }
 
-/* Seção de Informações (Sobre) */
+/* Informações sobre o gerador */
 .info-section {
     background-color: var(--primary-green);
     color: var(--text-light);
@@ -281,7 +259,7 @@ header {
     letter-spacing: 0.5px;
 }
 
-/* Seção de Sorteio (Dropdowns) */
+/* Área de sorteios e apostas */
 .sorteio-section {
     max-width: 850px;
     margin: 0 auto;
@@ -303,12 +281,11 @@ header {
 
 .title-clover {
     height: 1.25em;
-    /* Levemente maior que a fonte do texto (1.25 * 26px = 32.5px) */
     width: auto;
     object-fit: contain;
 }
 
-/* Accordion/Dropdown Items */
+/* Painéis retráteis */
 .accordion-item {
     background-color: #ffffff;
     border: 1px solid var(--border-color);
@@ -364,7 +341,6 @@ header {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Classe ativa do accordion (quando expandido) */
 .accordion-item.active {
     border-color: var(--primary-green);
 }
@@ -379,7 +355,6 @@ header {
     fill: var(--primary-green);
 }
 
-/* Conteúdo Expandido do Dropdown */
 .accordion-content {
     max-height: 0;
     overflow: hidden;
@@ -387,7 +362,6 @@ header {
     background-color: #ffffff;
 }
 
-/* Exibir quando ativo via JS alterando o max-height dinamicamente */
 .accordion-content-inner {
     padding: 24px;
     display: flex;
@@ -395,7 +369,7 @@ header {
     gap: 20px;
 }
 
-/* Botões do Painel */
+/* Botões dos painéis */
 .panel-actions {
     display: flex;
     gap: 12px;
@@ -442,7 +416,7 @@ header {
     color: var(--text-dark);
 }
 
-/* Display de Exibição dos Números Sorteados */
+/* Área onde aparecem os números */
 .display-container {
     display: flex;
     align-items: center;
@@ -464,14 +438,13 @@ header {
     flex-grow: 1;
 }
 
-/* Caso não haja números sorteados */
 .no-numbers {
     color: var(--text-muted);
     font-style: italic;
     font-size: 14px;
 }
 
-/* Formato das Bolas de Sorteio */
+/* Bolinhas do sorteio */
 .lottery-ball {
     width: 42px;
     height: 42px;
@@ -488,7 +461,6 @@ header {
     animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
-/* Variações de Cores para as Bolas baseada no tipo de jogo */
 .lottery-ball.megasena {
     background: radial-gradient(circle at 30% 30%, #34d399 0%, #10b981 60%, #047857 100%);
     color: #fff;
@@ -525,7 +497,7 @@ header {
     }
 }
 
-/* Botão de Cópia Individual */
+/* Botão para copiar números */
 .btn-copy-individual {
     background: none;
     border: none;
@@ -550,7 +522,7 @@ header {
     fill: currentColor;
 }
 
-/* Botão de Ação Global (PDF) */
+/* Botão principal de baixar PDF */
 .global-actions {
     display: flex;
     justify-content: center;
@@ -566,14 +538,12 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     background-color: #f59e0b;
-    /* Amarelo/ouro da esfera Lotomania */
     color: var(--text-light);
     border-radius: var(--border-radius);
 }
 
 .btn-global:hover {
     background-color: #d97706;
-    /* Amarelo/ouro escuro para o hover */
     transform: translateY(-2px);
 }
 
@@ -581,7 +551,7 @@ header {
     transform: translateY(0);
 }
 
-/* Feedback temporário de cópia */
+/* Mensagem flutuante de confirmação */
 .tooltip-feedback {
     position: absolute;
     bottom: 100%;
@@ -631,7 +601,7 @@ footer p {
     margin-bottom: 8px;
 }
 
-/* Responsividade - Media Queries (Desktop) */
+/* Ajustes para telas maiores */
 @media (min-width: 768px) {
     .info-container {
         grid-template-columns: 1fr;
@@ -676,30 +646,25 @@ footer p {
     }
 }
 
-/* Responsividade específica para telas de celulares pequenas */
+/* Ajustes para telas pequenas de celular */
 @media (max-width: 480px) {
     .logo-text {
         font-size: clamp(12px, 4.3vw, 16px);
-        /* Reduz e ajusta o texto da logo dinamicamente */
     }
 
     .logo-img {
         height: 24px;
-        /* Reduz a altura do ícone */
     }
 
     .menu {
         padding: 10px 14px;
-        /* Reduz o padding interno do menu */
         gap: 8px;
     }
 
     .itens ul {
         gap: 12px;
-        /* Reduz espaçamento dos itens do menu */
     }
 
-    /* Botões lado a lado com mesmo tamanho no mobile */
     .panel-actions {
         display: flex;
         flex-direction: row;
@@ -710,18 +675,14 @@ footer p {
 
     .panel-actions .btn {
         flex: 1;
-        /* Garante tamanho idêntico de 50% para ambos os botões */
         padding: 10px 8px;
-        /* Reduz o padding interno */
         font-size: 11px;
-        /* Diminui a fonte para o texto se adequar sem quebrar */
         white-space: nowrap;
-        /* Impede a quebra de linha interna */
         letter-spacing: -0.2px;
     }
 }
 
-/* Seção Sobre o Projeto (sobre.html) */
+/* Estilos da página sobre o projeto */
 .sobre-section {
     max-width: 800px;
     margin: 0 auto;

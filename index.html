@@ -5,29 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador Mega Sorte</title>
-    <!-- Fonte Outfit do Google Fonts para o design moderno e futurista -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <!-- Folha de estilos customizada -->
     <link rel="stylesheet" href="style.css">
-    <!-- jsPDF Biblioteca para geração e download de PDF no front-end -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <!-- Script contendo a lógica do gerador de apostas -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <!-- Imagem oculta pré-carregada para utilização no cabeçalho do PDF -->
-    <img id="pdf-logo" src="img/vecteezy_folha-de-trevo-da-sorte_13713853.png" style="display: none;"
+    <img id="pdf-logo" src="img/folha_trevo.png" style="display: none;"
         alt="Trevo de Quatro Folhas">
 
     <!-- Cabeçalho Principal -->
     <header>
         <div class="menu">
             <a href="#" class="logo-container">
-                <img src="img/logo.png" alt="Logo Trevo" class="logo-img">
+                <img src="img/logo.webp" alt="Logo Trevo" class="logo-img">
                 <span class="logo-text">GERADOR MEGA SORTE</span>
             </a>
             <nav class="itens">
@@ -40,7 +35,7 @@
 
     <div class="corpo">
 
-        <!-- Banner Superior (Hero) -->
+        <!-- Banner de destaque -->
         <section class="hero-section">
             <div class="hero-content">
                 <h1>Toda sorte do mundo em um clique!</h1>
@@ -50,20 +45,19 @@
                 </p>
             </div>
             <div class="hero-image-container">
-                <img src="img/sorte.png" alt="Pilhas de Dinheiro e Trevo" class="hero-image">
+                <img src="img/sorte.webp" alt="Pilhas de Dinheiro e Trevo" class="hero-image">
             </div>
         </section>
 
-        <!-- Seção Central de Apresentação e Detalhes -->
+        <!-- Apresentação e detalhes -->
         <section class="info-section">
             <div class="info-container">
                 <div class="info-logo-header">
-                    <img src="img/logo2.png" alt="Logo Trevo Branco">
+                    <img src="img/logo2.webp" alt="Logo Trevo Branco">
                     <h2>GERADOR MEGA SORTE</h2>
                 </div>
 
                 <div class="info-grid">
-                    <!-- Coluna Esquerda: Texto Apresentação -->
                     <div class="info-col-left">
                         <p>
                             Cansado de escolher os mesmos números da loteria e nunca ser premiado? O GERADOR MEGA SORTE
@@ -80,7 +74,6 @@
                         </p>
                     </div>
 
-                    <!-- Coluna Direita: Vantagens -->
                     <div class="info-col-right">
                         <h3>Por que usar o GERADOR MEGA SORTE?</h3>
                         <ul>
@@ -103,21 +96,20 @@
             </div>
         </section>
 
-        <!-- Seção do Sistema Gerador (Dropdowns) -->
+        <!-- Área de sorteios -->
         <section class="sorteio-section">
             <h2 class="section-title">
-                <img src="img/vecteezy_folha-de-trevo-da-sorte_13713853.png" alt="Trevo de Quatro Folhas"
+                <img src="img/folha_trevo.webp" alt="Trevo de Quatro Folhas"
                     class="title-clover">
                 Selecione o tipo de aposta
-                <img src="img/vecteezy_folha-de-trevo-da-sorte_13713853.png" alt="Trevo de Quatro Folhas"
+                <img src="img/folha_trevo.webp" alt="Trevo de Quatro Folhas"
                     class="title-clover">
             </h2>
 
-            <!-- Dropdown da Mega-Sena -->
+            <!-- Mega-Sena -->
             <div class="accordion-item" id="game-megasena">
                 <div class="accordion-header">
                     <div class="accordion-header-left">
-                        <!-- Ícone SVG de trevo correspondente ao jogo -->
                         <svg class="game-icon" viewBox="0 0 24 24">
                             <path
                                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
@@ -149,7 +141,7 @@
                 </div>
             </div>
 
-            <!-- Dropdown da Quina -->
+            <!-- Quina -->
             <div class="accordion-item" id="game-quina">
                 <div class="accordion-header">
                     <div class="accordion-header-left">
@@ -184,7 +176,7 @@
                 </div>
             </div>
 
-            <!-- Dropdown da Lotofácil -->
+            <!-- Lotofácil -->
             <div class="accordion-item" id="game-lotofacil">
                 <div class="accordion-header">
                     <div class="accordion-header-left">
@@ -219,7 +211,7 @@
                 </div>
             </div>
 
-            <!-- Dropdown da Lotomania -->
+            <!-- Lotomania -->
             <div class="accordion-item" id="game-lotomania">
                 <div class="accordion-header">
                     <div class="accordion-header-left">
@@ -254,7 +246,7 @@
                 </div>
             </div>
 
-            <!-- Botão de Ação Global (PDF) -->
+            <!-- Ação para baixar o PDF -->
             <div class="global-actions">
                 <button class="btn btn-global" id="btn-export-pdf">Baixar números da sorte</button>
             </div>
